@@ -4,6 +4,7 @@ import { ApiService } from '../shared/services/api.service';
 
 @Component({
   selector: 'app-footer',
+  standalone: true,
   templateUrl: './footer.component.html',
 })
 export class FooterComponent {

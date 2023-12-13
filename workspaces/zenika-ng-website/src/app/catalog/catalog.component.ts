@@ -1,12 +1,17 @@
+import { CurrencyPipe, NgFor, NgIf } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
+import { RouterLinkWithHref } from '@angular/router';
 import { zip } from 'rxjs';
 import { WELCOME_MSG } from '../app.token';
 import { BasketService } from '../basket/basket.service';
 import { CatalogService } from './catalog.service';
+import { ProductComponent } from './product/product.component';
 import { Product } from './product/product.types';
 
 @Component({
   selector: 'app-catalog',
+  standalone: true,
+  imports: [RouterLinkWithHref, CurrencyPipe, NgFor, NgIf, ProductComponent],
   templateUrl: './catalog.component.html',
 })
 export class CatalogComponent implements OnInit {
